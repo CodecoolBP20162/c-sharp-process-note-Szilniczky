@@ -117,8 +117,8 @@ namespace ProcessNote
 
         private void button4_Click(object sender, EventArgs e)
         {
-            StreamWriter file = new StreamWriter("TestFile.txt");
-            file.Write(textBox1.Text);
+            StreamWriter file = File.AppendText("TestFile.txt");
+            file.WriteLine(textBox1.Text);
             file.Close();
         }
     }
